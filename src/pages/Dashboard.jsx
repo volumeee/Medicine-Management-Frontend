@@ -33,9 +33,6 @@ const Home = React.lazy(() => import("./Home"));
 const Users = React.lazy(() => import("./Users"));
 const Medicines = React.lazy(() => import("./Medicine"));
 const Suppliers = React.lazy(() => import("./Supplier"));
-const Purchases = React.lazy(() => import("../components/Dashboard/Purchases"));
-const Sales = React.lazy(() => import("../components/Dashboard/Sales"));
-const Reports = React.lazy(() => import("../components/Dashboard/Reports"));
 
 const Dashboard = React.memo(() => {
   const [collapsed, setCollapsed] = useState(false);
@@ -194,9 +191,6 @@ const Dashboard = React.memo(() => {
               {renderRoute("users", Users)}
               {renderRoute("medicines", Medicines)}
               {renderRoute("suppliers", Suppliers)}
-              {renderRoute("purchases", Purchases)}
-              {renderRoute("sales", Sales)}
-              {renderRoute("reports", Reports)}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
